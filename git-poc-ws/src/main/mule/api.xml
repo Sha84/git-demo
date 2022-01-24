@@ -144,14 +144,7 @@ output application/json
                 <ee:set-variable variableName="id">attributes.uriParams.'id'</ee:set-variable>
             </ee:variables>
         </ee:transform>
-        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
-            <ee:message>
-                <ee:set-payload><![CDATA[%dw 2.0
-output application/json
----
-"successfully deleted"]]></ee:set-payload>
-            </ee:message>
-        </ee:transform>
+		<flow-ref doc:name="Flow Reference" doc:id="8a177ec7-0d01-4c9c-af6a-bb562b550434" name="delmain" />
     </flow>
     <flow name="get:\employees:apix-generic-db-sapi-config">
 		<flow-ref doc:name="Flow Reference" doc:id="81d6c565-eddc-4f23-9023-a5000f845002" name="mainFlow" />
